@@ -75,6 +75,7 @@ With this download you'll find the following files.
     - To run ETL pipeline that cleans data and stores in database
         `cd data`
         `python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db`
+        
     - To run ML pipeline that trains classifier and saves
         `cd models`
         `python train_classifier.py DisasterResponse.db classifier.pkl`
