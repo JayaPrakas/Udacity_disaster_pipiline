@@ -6,7 +6,8 @@
 - [Project Description](#Project-Description)
 - [Project motivation](#project-motivation)
 - [Interacting with this project](#Interacting-with-this-project)
-- [File descriptions](#file-descriptions)
+- [File descriptions](#File-descriptions)
+- [Instructions](#Instructions)
 - [Acknowledgements](#Acknowledgements)
 - [License](#License)
 
@@ -46,7 +47,7 @@ With this download you'll find the following files.
 ```text
     
 - app
-| - template
+| - templates
 | |- master.html  # main page of web app
 | |- go.html  # classification result page of web app
 |- run.py  # Flask file that runs app
@@ -55,13 +56,15 @@ With this download you'll find the following files.
 |- disaster_categories.csv  # data to process 
 |- disaster_messages.csv  # data to process
 |- process_data.py
-|- InsertDatabaseName.db   # database to save clean data to
+|- DisasterResponse.db   # database to save clean data to
 
 - models
 |- train_classifier.py
-|- classifier.pkl  # saved model 
+|- classifier.pkl  # saved model after running
 
 - README.md
+
+- LICENSE
 
 ```
 
