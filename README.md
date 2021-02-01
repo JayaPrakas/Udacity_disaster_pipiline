@@ -13,11 +13,23 @@
 
 ## Installation
 
-This notebook runs on **anaconda distribution** with **python**. All required libraries are already there in anaconda and don't require additional python libraries.
+The following are used along with python.
+
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
+- flask
+- sqlalchemy
+- json
+- pickle
 
 ## Project Description
 
-This project is analysis of [Airbnb](https://www.airbnb.com) data of Asheville, North Carolina, United States. 
+This project is of creating disaster response using python and using it with flask.
+
+In this project, disaster data from Figure Eight is used to build a model that classifies disaster messages.
 
 ## Project motivation
 
@@ -25,31 +37,33 @@ As a requirement for the nanodegree [become a data scientist](https://www.udacit
 
 ## Interacting with this project
 
-- To interact, clone the repo: `git clone https://github.com/JayaPrakas/Asheville_Airbnb_Analysis.git` or fork this repository
+- To interact, clone the repo: `git clone https://github.com/JayaPrakas/udacity_disaster_pipeline.git` or fork this repository
 
 ## File descriptions
 
 With this download you'll find the following files.
 
 ```text
-
-├── Asheville_airbnb.ipynb
-
-├── data
-
-    ├── calendar_.csv
     
-    ├── listings_.csv
+- app
+| - template
+| |- master.html  # main page of web app
+| |- go.html  # classification result page of web app
+|- run.py  # Flask file that runs app
+
+- data
+|- disaster_categories.csv  # data to process 
+|- disaster_messages.csv  # data to process
+|- process_data.py
+|- InsertDatabaseName.db   # database to save clean data to
+
+- models
+|- train_classifier.py
+|- classifier.pkl  # saved model 
+
+- README.md
 
 ```
-
-- Asheville_airbnb.ipynb ==> Notebook to investigate trends of bookings on Airbnb in Asheville.
-
-- data consisting of following files
-
-- calendar.csv           ==> Booking information of houses in Seattle.
-
-- listings.csv           ==> data containing details of facilities available of houses, host information and lot of other information in Asheville.
 
 ## Instructions
 
@@ -67,7 +81,7 @@ With this download you'll find the following files.
 
 ## Acknowledgements
 
-Thanks to [Udacity](https://www.udacity.com/) and [Airbnb](https://airbnb.com) for data
+Thanks to [Udacity](https://www.udacity.com/) for data, starter code and instructions
 
 ## License
 
