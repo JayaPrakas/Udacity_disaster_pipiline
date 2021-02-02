@@ -25,6 +25,7 @@ The following are used along with python.
 - sqlalchemy
 - json
 - pickle
+- joblib
 
 ## Project Description
 
