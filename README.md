@@ -60,7 +60,6 @@ With this download you'll find the following files.
 
 - models
 |- train_classifier.py
-|- etl_pipeline.db
 |- classifier.pkl  # saved model after running
 
 - README.md
@@ -79,7 +78,7 @@ With this download you'll find the following files.
         
     - To run ML pipeline that trains classifier and saves
         `cd models`
-        `python train_classifier.py etl_pipeline.db classifier.pkl`
+        `python train_classifier.py ../data/DisasterResponse.db classifier.pkl`
 
 2. Run the following command in the app's directory to run your web app.
     `cd app`
