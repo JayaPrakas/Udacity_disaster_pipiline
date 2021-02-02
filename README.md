@@ -77,7 +77,10 @@ With this download you'll find the following files.
         `cd data`
         `python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db`
         
+        
+        
     - To run ML pipeline that trains classifier and saves
+        `cd ..`
         `cd models`
         `python train_classifier.py ../data/DisasterResponse.db classifier.pkl`
 
