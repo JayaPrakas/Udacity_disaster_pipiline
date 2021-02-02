@@ -81,8 +81,7 @@ With this download you'll find the following files.
         
     - To run ML pipeline that trains classifier and saves
         `cd ..`
-        `cd models`
-        `python train_classifier.py ../data/DisasterResponse.db classifier.pkl`
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
 2. Run the following command in the app's directory to run your web app.
     `cd app`
