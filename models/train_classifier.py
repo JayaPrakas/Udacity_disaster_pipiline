@@ -1,5 +1,7 @@
 import sys
 
+import numpy as np
+
 import pandas as pd
 
 from sqlalchemy import create_engine
@@ -45,6 +47,8 @@ nltk.download(['punkt','stopwords','wordnet'])
 
 def load_data(database_filepath):
     
+    """ Takes input database file path and creates sqlite engine and returns data frames used for our model and category names """
+    
     engine = create_engine('sqlite:///'+ database_filepath)
 
     df = pd.read_sql_table('messages', engine)
@@ -59,6 +63,8 @@ def load_data(database_filepath):
 
 
 def tokenize(text):
+    
+    """ Cleans the data files which is given as text to numerical for us to perform machine learning classification """
     
     text = re.sub(r"[^a-zA-Z0-9]", " ", text.lower())
     
@@ -78,6 +84,7 @@ def tokenize(text):
 
 
 def build_model():
+    """ Machine learning pipeline is created """
     
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
@@ -97,7 +104,7 @@ def build_model():
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
-    
+    """ takes model,data and category names as inputs and evaluates it and generates classification report """
     y_pred = model.predict(X_test)
     
     pred_data = pd.DataFrame(y_pred, columns = category_names)
@@ -113,11 +120,13 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
 
 def save_model(model, model_filepath):
+    """ dumps model as pickle so it can be used later """
     
     pickle.dump(model, open(model_filepath, 'wb'))
 
 
 def main():
+    """ Performs and shows how model is performing and also error message when encountered with error """
     if len(sys.argv) == 3:
         database_filepath, model_filepath = sys.argv[1:]
         print('Loading data...\n    DATABASE: {}'.format(database_filepath))
