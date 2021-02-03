@@ -4,6 +4,7 @@
 
 - [Installation](#installation)
 - [Project Description](#Project-Description)
+- [Project summary](#Project-summary)
 - [Project motivation](#project-motivation)
 - [Interacting with this project](#Interacting-with-this-project)
 - [File descriptions](#File-descriptions)
@@ -29,7 +30,9 @@ The following are used along with python.
 
 ## Project Description
 
-This project is of creating disaster response using python and using it with flask.
+This project is of creating disaster response using python and using it as web app with flask.
+
+## Project summary
 
 In this project, a model is built to analyze disaster data from Figure Eight that classifies disaster messages, using data set containing real messages that were sent during disaster events, machine learning pipeline is created to categorize these events so that messages can be sent to appropriate disaster relief agency.
 
