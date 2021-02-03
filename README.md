@@ -31,7 +31,11 @@ The following are used along with python.
 
 This project is of creating disaster response using python and using it with flask.
 
-In this project, disaster data from Figure Eight is used to build a model that classifies disaster messages.
+In this project, a model is built to analyze disaster data from Figure Eight that classifies disaster messages, using data set containing real messages that were sent during disaster events, machine learning pipeline is created to categorize these events so that messages can be sent to appropriate disaster relief agency.
+
+This project also includes a web app where an emergency worker can input a new message and get classification results in several categories.
+
+So, this app can be used in disaster times where emergency worker can input message and get results and also visualization and forward it to corresponding relief agency.
 
 ## Project motivation
 
