@@ -20,6 +20,8 @@ def load_data(messages_filepath, categories_filepath):
 
 def clean_data(df):
     
+    """ cleans text data and converts it to numerical """ 
+    
     categories = df['categories'].str.split(';', expand=True)
 
     # Renaming the columns
@@ -52,6 +54,7 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
+    """ sqlite engine is created """
     
     engine = create_engine('sqlite:///'+ database_filename)
     
@@ -59,6 +62,7 @@ def save_data(df, database_filename):
 
 
 def main():
+    """ Displays models operation and error information if encountered """
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
